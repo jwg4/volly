@@ -10,5 +10,8 @@ setup(
     license='MIT',
     packages=['volly'],
     zip_safe=False,
-    test_suite="tests"
+    test_suite="tests",
+    install_requires=[
+        "requests"
+    ]
 )
