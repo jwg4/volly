@@ -10,7 +10,13 @@ class Service(object):
     def store(self, key, value):
         pass
 
-    def __getitem__(self, key):
+    def retrieve(self, key):
         url = "%s/%s" % (self.base_url, key)
         r = requests.get(url)
         return r.content
+
+    def __setitem__(self, key, value):
+        self.store(key, value)
+
+    def __getitem__(self, key):
+        return self.retrieve(key)
