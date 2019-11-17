@@ -8,7 +8,11 @@ class Service(object):
         self.base_url = url
 
     def store(self, key, value):
-        pass
+        data = {
+            'key': key,
+            'value': value,
+        }
+        r = requests.post(self.base_url, data)  # noqa: F841
 
     def retrieve(self, key):
         url = "%s/%s" % (self.base_url, key)
