@@ -1,5 +1,7 @@
 import requests
 
+from .error import Error
+
 DEFAULT_URL = "https://volatile.wtf"
 
 

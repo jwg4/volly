@@ -16,4 +16,4 @@ class TestService(TestCase):
 
     def test_write_missing_value(self):
         svc = Service("https://volatile.wtf")
-        self.assertRaises(lambda: svc["UNGYIZFHIA"], MissingKeyException)
+        self.assertRaises(MissingKeyException, lambda: svc["UNGYIZFHIA"])
