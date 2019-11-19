@@ -12,7 +12,7 @@ class TestService(TestCase):
     def test_read_and_write(self):
         svc = Service("https://volatile.wtf")
         svc["ZFHIAUNGYI"] = "P3XD8NWG7K"
-        self.assertEqual(svc["ZFHIAUNGYI"], "P3XD8NWG7K")
+        self.assertEqual(svc["ZFHIAUNGYI"], b'P3XD8NWG7K')
 
     def test_write_missing_value(self):
         svc = Service("https://volatile.wtf")
