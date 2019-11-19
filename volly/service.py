@@ -17,6 +17,8 @@ class Service(object):
     def retrieve(self, key):
         url = "%s/%s" % (self.base_url, key)
         r = requests.get(url)
+        if r.status_code != 200:
+            raise Error(r, self, key)
         return r.content
 
     def __setitem__(self, key, value):
