@@ -2,4 +2,4 @@
 >>> svc = Service("https://volatile.wtf")
 >>> svc["H734B2OWTA"] = "Hello, world!"
 >>> svc["H734B2OWTA"]
-'Hello, world!'
+b'Hello, world!'
