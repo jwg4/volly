@@ -1,0 +1,2 @@
+class TestService(object):
+    pass
